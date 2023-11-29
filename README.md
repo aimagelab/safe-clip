@@ -19,7 +19,7 @@ Please cite with the following BibTeX:
 @article{poppi2024removing,
   title={{Removing NSFW Concepts from Vision-and-Language Models for Text-to-Image Retrieval and Generation}},
   author={Poppi, Samuele and Poppi, Tobia and Cocchi, Federico and Cornia, Marcella and Baraldi, Lorenzo and Cucchiara, Rita},
-  booktitle={arXiv preprint arXiv:2311.16254},
+  journal={arXiv preprint arXiv:2311.16254},
   year={2023}
 }
 ```
