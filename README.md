@@ -4,7 +4,7 @@
 </div>
 
 This repository contains the reference code for the paper [Removing NSFW Concepts from Vision-and-Language Models for Text-to-Image Retrieval and Generation](https://arxiv.org/abs/2311.16254).
-
+<br></br>
 <p align="center">
   <img src="safe-clip-figure.png" alt="Safe-CLIP" width="820" />
 </p> 
