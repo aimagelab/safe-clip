@@ -3,7 +3,7 @@
   
 </div>
 
-This repository contains the reference code for the paper [Removing NSFW Concepts from Vision-and-Language Models for Text-to-Image Retrieval and Generation](https://arxiv.org/abs/2311.16254).
+This repository contains the reference code for the paper [Safe-CLIP: Removing NSFW Concepts from Vision-and-Language Models](https://arxiv.org/abs/2311.16254).
 <br></br>
 <p align="center">
   <img src="safe-clip-figure.png" alt="Safe-CLIP" width="820" />
@@ -17,9 +17,9 @@ Source code and trained model will be released soon.
 Please cite with the following BibTeX:
 ```
 @article{poppi2024removing,
-  title={{Removing NSFW Concepts from Vision-and-Language Models for Text-to-Image Retrieval and Generation}},
+  title={{Safe-CLIP: Removing NSFW Concepts from Vision-and-Language Models}},
   author={Poppi, Samuele and Poppi, Tobia and Cocchi, Federico and Cornia, Marcella and Baraldi, Lorenzo and Cucchiara, Rita},
   journal={arXiv preprint arXiv:2311.16254},
-  year={2023}
+  year={2024}
 }
 ```
