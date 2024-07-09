@@ -6,7 +6,7 @@
 This repository contains the reference code for the paper [Safe-CLIP: Removing NSFW Concepts from Vision-and-Language Models](https://arxiv.org/abs/2311.16254).
 <br></br>
 <p align="center">
-  <img src="safe-clip-figure.png" alt="Safe-CLIP" width="820" />
+  <img src="imgs/safe-clip-figure.png" alt="Safe-CLIP" width="820" />
 </p> 
 
 ## TODO
