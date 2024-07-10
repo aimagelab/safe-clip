@@ -149,7 +149,6 @@ def eval_model(args):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--model-path", type=str, default="facebook/opt-350m")
     parser.add_argument("--model-base", type=str, default=None)
     parser.add_argument("--image-file", type=str, default='https://llava-vl.github.io/static/images/view.jpg')
     parser.add_argument("--query", type=str, default='Describe this image.')
@@ -159,17 +158,27 @@ if __name__ == "__main__":
     parser.add_argument("--top_p", type=float, default=None)
     parser.add_argument("--num_beams", type=int, default=1)
     parser.add_argument("--max_new_tokens", type=int, default=128)
-    parser.add_argument("--ve_name", type=str, default='aimagelab/safeclip_vit-l_14') # VE-regularized - VE-std
+    parser.add_argument("--model-path", type=str, default='liuhaotian/llava-llama-2-13b-chat-lightning-preview')
+    parser.add_argument("--ve_name", type=str, default='aimagelab/safeclip_vit-l_14')
     parser.add_argument("--our_vision_encoder", action='store_true', default=True)
+
+    parser.add_argument("--paper_model", action='store_true', default=False)
+    parser.add_argument("--llava_15", action='store_true', default=False)
     args = parser.parse_args()
 
-    print("Using llava-llama-2-13b - paper version") # model used for the paper
-    args.model_path= 'liuhaotian/llava-llama-2-13b-chat-lightning-preview'
-    args.ve_name = 'aimagelab/safeclip_vit-l_14'
-
-    # print("Newer llava version")
-    # args.model_path = "liuhaotian/llava-v1.5-13b"
-    # args.ve_name = 'aimagelab/safeclip_vit-l_14_336'
+    if args.paper_model and args.llava_15:
+        raise ValueError("Cannot use both the argument at the same time")
+    if not args.paper_model and not args.llava_15:
+        args.paper_model = True
+        
+    if args.paper_model:
+        print("Using llava-llama-2-13b - paper version") # model used for the paper
+        args.model_path= 'liuhaotian/llava-llama-2-13b-chat-lightning-preview'
+        args.ve_name = 'aimagelab/safeclip_vit-l_14'
+    elif args.llava_15:
+        print("Newer llava version")
+        args.model_path = "liuhaotian/llava-v1.5-13b"
+        args.ve_name = 'aimagelab/safeclip_vit-l_14_336'
 
     eval_model(args)
     print("Done")
