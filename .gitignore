@@ -1,1 +1,4 @@
-static/images/*
+image_to_text_generation.sh
+LLaVa_generation/llava/
+.vscode/*
+*.pyc
