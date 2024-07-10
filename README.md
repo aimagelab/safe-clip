@@ -43,7 +43,7 @@ Based on the CLIP model, Safe-CLIP is fine-tuned to serve the association betwee
 To create the conda environment named safe-clip use the following instructions.
 With this environment you have all the packages to run the code inside this repo. 
 ```
-conda create -n safe-clip python==3.9
+conda create -n safe-clip python==3.10
 conda activate safe-clip
 pip install -r requirements.txt
 ```
@@ -78,9 +78,9 @@ The user can specificy an image `image-file` and a question `query` through the 
 conda activate safe-clip
 
 out_dir="your_path"
-cd "$out_dir/safe-clip"
+cd "$out_dir/safe-clip/LLaVA_generation"
 
-python -u LLaVA_generation/main.py --paper_model
+python -u main.py --paper_model
 ```
 
 # Citation
