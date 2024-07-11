@@ -43,7 +43,7 @@
               <a href="https://...">Tobia Poppi</a>*<sup>1,2</sup>,
             </span>
             <span class="author-block">
-                <a href="https://...">Federico Cocchi</a>*<sup>1,2</sup>,
+                <a href="https://federico1-creator.github.io/Federico_Cocchi/">Federico Cocchi</a>*<sup>1,2</sup>,
             </span>
             <br>
             <span class="author-block">
@@ -53,13 +53,14 @@
               <a href="https://...">Lorenzo Baraldi</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              <a href="https://...">Rita Cucchiara</a><sup>1</sup>
+              <a href="https://...">Rita Cucchiara</a><sup>1,3</sup>
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
             <span class="author-block"><sup>1</sup>University of Modena and Reggio Emilia,</span>
             <span class="author-block"><sup>2</sup>University of Pisa,</span>
+            <span class="author-block"><sup>3</sup>IIT-CNR, Italy,</span>
           </div>
           <div class="is-size-5 publication-authors">
             <span class="author-block">* Equal contribution</span>
@@ -143,7 +144,6 @@
   </div>
 </section>
 
-
 <section class="hero is-light is-small">
   <div class="hero-body">
     <div class="container">
@@ -213,7 +213,7 @@
         <h2 class="title is-3">Model architecture</h2>
         <!-- <h2 class="title is-5">Safe-CLIP Removing NSFW Concepts</h2> -->
         <div class="content has-text-centered">
-          <img src="static/images/model.jpg" class="center" width="600">
+          <img src="static/images/model.jpg" class="center" width="760">
         </div>
       </div>
     </div> 
@@ -223,10 +223,15 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Model description</h2>
+        <!-- <h2 class="title is-3">Model description</h2> -->
         <div class="content has-text-justified">
           <p>
-            Machine-generated images are ...
+            Safe-CLIP is a vision-and-language model designed to mitigate the risks associated with NSFW (Not Safe For Work) content in AI applications.
+            To achieved this, we fine-tuned the CLIP model on a synthetic dataset obtained from a large language model trained to convert between safe and unsafe sentences, 
+            and a text-to-image generator.
+
+            The fine-tuning process is based on a mixture of cosine distance and contrastive losses to modifiy the CLIP model's embedding space,
+            but at the same time preserving the original CLIP's ability to associate linguistic and visual concepts.
         </div>
       </div>
     </div>
@@ -236,10 +241,10 @@
 <section class="hero is-light is-small">
   <div class="columns is-centered has-text-centered">
     <div class="column is-four-fifths">
-      <h2 class="title is-3">Model architecture</h2>
+      <h2 class="title is-3">Safe-CLIP Tasks</h2>
       <!-- <h2 class="title is-5">Safe-CLIP Removing NSFW Concepts</h2> -->
       <div class="content has-text-centered">
-        <img src="static/images/first_page.jpg" class="center" width="600">
+        <img src="static/images/first_page.jpg" class="center" width="760">
       </div>
     </div>
   </div> 
@@ -249,11 +254,17 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Qualitative Results / Tasks</h2>
+        <!-- <h2 class="title is-3">Qualitative Results / Tasks</h2> -->
         <div class="content has-text-justified">
           <p>
-            Machine-generated images are ...
-        </div>
+            We evaluate Safe-CLIP on a variety of tasks. Specifically, cross-modal retrieval consider both text and image as queries information 
+            to retrieve the most relevant information from the other modality.
+
+            Moreover, we evaluate the model on text-to-image and image-to-text generation tasks.
+            Employing the stable diffusion pipeline for the former and LLaVA family models for the latter.
+            
+            It is important to mention that thanks to its development Safe-CLIP can be effectively and simply integrated in pre-trained generative models.
+            
       </div>
     </div>
   </div>
@@ -262,10 +273,10 @@
 <section class="hero is-light is-small">
   <div class="columns is-centered has-text-centered">
     <div class="column is-four-fifths">
-      <h2 class="title is-3">Model architecture</h2>
+      <h2 class="title is-3">Qualitative Results</h2>
       <!-- <h2 class="title is-5">Safe-CLIP Removing NSFW Concepts</h2> -->
       <div class="content has-text-centered">
-        <img src="static/images/unimore_logo.png" class="center" width="600">
+        <img src="static/images/unimore_logo.png" class="center" width="760">
       </div>
     </div>
   </div> 
@@ -279,10 +290,10 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Citation</h2>
         <div class="content has-text-justified">
-          <pre><code>@article{poppi2024removing,
+          <pre><code>@inproceedings{poppi2024removing,
             title={{Safe-CLIP: Removing NSFW Concepts from Vision-and-Language Models}},
             author={Poppi, Samuele and Poppi, Tobia and Cocchi, Federico and Cornia, Marcella and Baraldi, Lorenzo and Cucchiara, Rita},
-            journal={arXiv preprint arXiv:2311.16254},
+            booktitle={Proceedings of the European Conference on Computer Vision},
             year={2024}
           }</code></pre>
         </div>
