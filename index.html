@@ -70,6 +70,12 @@
       cursor: pointer;
     }
 
+    .container_image {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
     .slider .slider-navigation-next {
       display: none;
     }
@@ -311,7 +317,6 @@
       <div class="column is-four-fifths">
         <!-- <h2 class="title is-3">Qualitative Results / Tasks</h2> -->
         <div class="content has-text-justified">
-          <p>
             We evaluate Safe-CLIP on a variety of tasks. Specifically, cross-modal retrieval consider both text and image as queries information 
             to retrieve the most relevant information from the other modality.
 
@@ -326,26 +331,35 @@
 </section>
 
 <section class="hero is-light is-small">
-  <div class="container is-max-desktop">
   <div class="columns is-centered has-text-centered">
     <div class="column is-four-fifths">
       <h2 class="title is-3">Qualitative Results</h2>
       <!-- <h2 class="title is-5">Safe-CLIP Removing NSFW Concepts</h2> -->
       <div class="content has-text-centered">
-        <div class="container">
-          <img src="static/images/2.png" class="center" width="380">
-          <img src="static/images/1.png" class="center" width="380">
-        </div>
-      <div class="content has-text-justified">
-          We evaluate Safe-CLIP on a variety of tasks. Specifically, cross-modal retrieval consider both text and image as queries information 
-          to retrieve the most relevant information from the other modality.
 
-          Moreover, we evaluate the model on text-to-image and image-to-text generation tasks.
-          Employing the stable diffusion pipeline for the former and LLaVA family models for the latter.
-          
-          It is important to mention that thanks to its development Safe-CLIP can be effectively and simply integrated in pre-trained generative models.
-      </div>
-    </div>
+        <!-- <div class="container_image">
+        <figure>
+          <img src="static/images/2.png" class="center" width="370">
+          <figcaption>Text-to-Image Retrieval</figcaption>
+        </figure>
+        <figure>
+          <img src="static/images/1.png" class="center" width="370">
+          <figcaption>Image-to-Text Retrieval</figcaption>
+        </figure>
+        </div> -->
+        <div class="container">
+          <figure>
+            <img src="static/images/combo.png" class="center" width="760">
+            <figcaption>Text-to-Image Retrieval & Image-to-Text Retrieval</figcaption>
+          </figure>
+        <figure>
+          <img src="static/images/llava_safe_clip.png" class="center" width="760">
+          <figcaption>Image-to-Text Generation with LLaVA Models</figcaption>
+        </figure>
+        <figure>
+          <img src="static/images/i2p.png" class="center" width="760">
+          <figcaption>Text-to-Image Generation with Stable Diffusion 1.4</figcaption>
+        </figure>
       </div>
     </div>
   </div> 
