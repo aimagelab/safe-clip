@@ -87,10 +87,10 @@ python -u main.py --paper_model
 
 Please cite with the following BibTeX:
 ```
-@article{poppi2024removing,
+@inproceedings{poppi2024removing,
   title={{Safe-CLIP: Removing NSFW Concepts from Vision-and-Language Models}},
   author={Poppi, Samuele and Poppi, Tobia and Cocchi, Federico and Cornia, Marcella and Baraldi, Lorenzo and Cucchiara, Rita},
-  journal={arXiv preprint arXiv:2311.16254},
+  booktitle={Proceedings of the European Conference on Computer Vision},
   year={2024}
 }
 ```
