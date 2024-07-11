@@ -1,6 +1,8 @@
 <div align="center">
-  <h1>Safe-CLIP: Removing NSFW Concepts from</br>Vision-and-Language Models</h1>
-  
+  <h1>Safe-CLIP: Removing NSFW Concepts from</br>Vision-and-Language Models
+
+  (ECCV 2024)
+  </h1>  
 </div>
 
 This repository contains the reference code for the paper [**Safe-CLIP: Removing NSFW Concepts from Vision-and-Language Models**](https://arxiv.org/abs/2311.16254).
