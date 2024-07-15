@@ -50,6 +50,46 @@ conda activate safe-clip
 pip install -r requirements.txt
 ```
 
+## Usage of Safe-CLIP
+See the snippet below for usage with **Transformers**:
+
+```python
+from transformers import CLIPModel
+
+model_id = "aimagelab/safeclip_vit-l_14"
+model = CLIPModel.from_pretrained(model_id)
+```
+
+See the snippet below for usage with **open_clip**:
+
+```python
+import open_clip
+import torch
+from huggingface_hub import hf_hub_download
+
+class QuickGELU(torch.nn.Module):
+    def __init__(self):
+        super().__init__()
+        self.value = torch.tensor(1.702, dtype=torch.float32)
+        
+    def forward(self, x):
+        return x * torch.sigmoid(self.value * x)
+
+def replace_activation(model):
+    for pt_layer in model.transformer.resblocks:
+        pt_layer.mlp.gelu = QuickGELU()
+    
+    for pt_layer in model.visual.transformer.resblocks:
+        pt_layer.mlp.gelu = QuickGELU()
+
+    return model
+
+file_path = hf_hub_download(repo_id='aimagelab/safeclip_vit-l_14', filename='open_clip_pytorch_model.bin')
+model, train_preprocess_oc, preprocess_oc = open_clip.create_model_and_transforms('ViT-L/14', pretrained=file_path)
+model= replace_activation(model)
+``` 
+
+
 ## Text-to-Image
 Section to perform Text-to-Image generation, starting from a user text input.
 It is possbile to use the "safeclip_t2i_generation_pipeline.py" script from the repository or the google colab notebook interactive demo. 
