@@ -1,14 +1,14 @@
 import os
 import torch
 from tqdm import tqdm
-from safeclip.training.losses import CLIPLoss_Positive, CosineDistance
+from training.losses import CLIPLoss_Positive, CosineDistance
 from transformers import CLIPVisionModelWithProjection, CLIPTextModelWithProjection, CLIPTokenizer
 from peft import PeftModel
 from torch.utils.data import DataLoader
 
-from safeclip.training.dataset.visu import ViSU
-from safeclip.training.recall_computation import compute_recall
-from safeclip.training.utils.logger import WandbLogger
+from training.dataset.visu import ViSU
+from training.recall_computation import compute_recall
+from training.utils.logger import WandbLogger
 
 @torch.inference_mode()
 def validate(

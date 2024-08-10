@@ -7,11 +7,11 @@ from torch.utils.data import DataLoader
 from transformers import CLIPVisionModelWithProjection, CLIPTextModelWithProjection, CLIPTokenizer
 from peft import PeftModel
 
-from safeclip.training.dataset.visu import ViSU
-from safeclip.training.losses import CLIPLoss_Positive, CosineDistance
-from safeclip.training.utils.logger import WandbLogger, summarize
-from safeclip.training.validation import validate
-from safeclip.training.utils.checkpointing import CheckpointManager
+from training.dataset.visu import ViSU
+from training.losses import CLIPLoss_Positive, CosineDistance
+from training.utils.logger import WandbLogger, summarize
+from training.validation import validate
+from training.utils.checkpointing import CheckpointManager
 
 
 @torch.enable_grad()

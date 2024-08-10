@@ -9,11 +9,11 @@ import wandb
 from transformers import CLIPVisionModelWithProjection, CLIPTextModelWithProjection, CLIPTokenizer
 from peft import LoraConfig, get_peft_model
 
-from safeclip.training.dataset.visu import ViSU
-from safeclip.training.utils.argumentparser import parse_arguments
-from safeclip.training.train import training
-from safeclip.training.utils.logger import WandbLogger
-from safeclip.training.losses import CLIPLoss_Positive, CosineDistance
+from training.dataset.visu import ViSU
+from training.utils.argumentparser import parse_arguments
+from training.train import training
+from training.utils.logger import WandbLogger
+from training.losses import CLIPLoss_Positive, CosineDistance
 
 
 def main(args):
