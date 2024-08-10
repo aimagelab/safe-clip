@@ -125,6 +125,9 @@ cd "$out_dir/safe-clip/LLaVA_generation"
 python -u main.py --paper_model
 ```
 
+## Training
+[`safeclip_training.py`](https://github.com/aimagelab/safe-clip/blob/main/safeclip_training.py) is the python script that can be used to train Safe-CLIP, and in the [`sh_scripts`](https://github.com/aimagelab/safe-clip/tree/main/training/sh_scripts) folder there are the `.sh` sbatch slurm scripts that have been used to launch the python script.
+
 # Citation
 
 Please cite with the following BibTeX:
